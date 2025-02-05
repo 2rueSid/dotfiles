@@ -1,0 +1,5 @@
+rsync -av ~/.config/tmux/tmux.conf ./
+rsync -av ~/.zshrc .
+rsync -av ~/.nix-profile/manifest.json ./.nix-profile
+rsync -av ~/.gitmessage.md .
+rsync -av ~/.gitconfig .

@@ -1,1 +1,76 @@
-/Users/dmytro/.gitconfig
+[user]
+	name = Dmytro Kachurovskyi
+	email = 2rueSid@gmail.com
+	signingkey = /Users/dmytro/.ssh/id_rsa.pub
+
+[alias]
+    # Checkout commands
+    ch = checkout
+    chb = checkout -b
+
+    # Commit commands
+    ca = commit --amend --no-verify
+    c = commit -a -m
+    ci = commit --no-verify -a -m
+    cm = commit
+
+    # Status and branch commands
+    s = status -s
+    b = branch
+    bd = branch -D
+
+    # Remote interaction
+    um = fetch origin master
+    pm = pull origin
+    pr = pull --rebase origin
+
+    # Diff commands
+    d = diff --word-diff
+    dft = -c diff.external=difft diff
+    ddiff = -c diff.external=difft diff
+
+    # Rebase commands
+    ri = rebase -i origin/master
+    r = rebase origin/master
+    rc = rebase --continue
+    ra = rebase --abort
+    rs = rebase --skip
+
+    # Log commands
+    ls = log --pretty=format:"%C(green)%h\\ %C(yellow)[%ad]%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative -5
+    dl = -c diff.external=difft log -p --ext-diff
+    dlog = -c diff.external=difft log --ext-diff
+
+    # Show commands
+    ds = -c diff.external=difft show --ext-diff
+    dshow = -c diff.external=difft show --ext-diff
+
+[push]
+    default = current
+
+[pull]
+    merge = true
+
+[core]
+    pager = delta
+    editor = nvim
+
+[interactive]
+    diffFilter = delta --color-only
+
+[delta]
+    navigate = true  # use n and N to move between diff sections
+
+[merge]
+    conflictstyle = diff3
+
+[diff]
+    colorMoved = default
+    external = difft
+
+[gpg]
+    format = ssh
+
+[commit]
+    gpgsign = true
+    template = /Users/dmytro/.gitmessage.md

@@ -5,7 +5,7 @@ jobs:
   build:
     uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
     with:
-      build_matrix_path: "zmk-config/build.yaml"
-      config_path: "zmk-config/config"
-      fallback_binary: "zmk-config/bin"
-      archive_name: "zmk-firmware"
+      build_matrix_path:  zmk-config/build.yaml   
+      config_path:        zmk-config             
+      fallback_binary:    bin
+      archive_name:       zmk-firmware
